@@ -1,0 +1,1 @@
+(function(e){jQuery(document).ready(function(e){e(".scroll").click(function(t){console.log("hello!");t.preventDefault();e("html,body").animate({scrollTop:e(this.hash).offset().top},500)});e(".slicknav_nav li a").click(function(t){console.log("hello!");t.preventDefault();e("html,body").animate({scrollTop:e(this.hash).offset().top},500)})})})(jQuery);
