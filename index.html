@@ -18,10 +18,10 @@
 	<body>
 		<div class="container" id="homeAnchor">
 			<ul id="menu">
-				<li class="homeMenu"><a href="#homeAnchor" class="scroll">Home</a></li>
-				<li class="projectsMenu"><a href="#projectsAnchor" class="scroll projectsMenu">Projects</a></li>
-				<li class="workMenu"><a href="#workAnchor" class="scroll workMenu">Experience</a></li>
-				<li class="contactMenu"><a href="#contactAnchor" class="scroll contactMenu">Contact</a></li>
+				<li class="menuItem homeMenu"><a href="#homeAnchor" class="scroll">Home</a></li>
+				<li class="menuItem projectsMenu"><a href="#projectsAnchor" class="scroll projectsMenu">Projects</a></li>
+				<li class="menuItem workMenu"><a href="#workAnchor" class="scroll workMenu">Experience</a></li>
+				<li class="menuItem contactMenu"><a href="#contactAnchor" class="scroll contactMenu">Contact</a></li>
 			</ul>
 			<div class="hero">
 				<div class="introContent">
@@ -29,7 +29,10 @@
 				</div>
 			</div>
 			<!--Pattern HTML-->
-			<div class="sectionHeader projectsHeader" id="projectsAnchor">Projects</div>
+			<div class="sectionHeader projectsHeader">
+				<a class="anchor" id="projectsAnchor"></a>
+				Projects
+			</div>
 			<div class="projectList">
 				<ul class="list img-list">
 					<li>
@@ -76,15 +79,27 @@
 				
 				</ul>
 			</div>
-			<div class="sectionHeader workHeader" id="workAnchor">Experience</div>
+			<div class="sectionHeader workHeader">
+				<a class="anchor" id="workAnchor"></a>
+				Experience
+			</div>
 			<div id="workCarousel" class="owl-carousel">
-				<div class="workItem"> Intel Application Dev</div>
+				<div class="workItem"> 
+					<div class="work-text">
+						<h4 class="work-head">Application Developer @ Intel</h4>
+						<p class="work-summary">A game that tests your memory of movie history and your favorite stars.</p>
+					</div>
+					<div class="work-img intel1-img"></div>
+				</div>
 				<div class="workItem"> Intel Systems Int </div>
 				<div class="workItem"> NASA </div>
 				<div class="workItem"> WOLV </div>
 				<div class="workItem"> Education </div>
 			</div>
-			<div class="sectionHeader contactHeader" id="contactAnchor">Contact</div>
+			<div class="sectionHeader contactHeader">
+				<a class="anchor" id="contactAnchor"></a>
+				Contact
+			</div>
 		</div>
 		<!-- Put this right before the </body> closing tag -->
 		<script>

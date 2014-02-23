@@ -56,23 +56,28 @@ ul {
 	width: 5em;
 } 
 
-.homeMenu:hover {
-	border-bottom: .1em solid #DBDB6C;
+.slicknav_nav a:hover {
+	background-color: #333;
+} 
+
+.slicknav_nav .homeMenu a:hover, .slicknav_nav .homeMenu a:active {
+	color: #DBDB6C;
 }
 
-.projectsMenu:hover {
-	border-bottom: .1em solid #4EACBE;
+.slicknav_nav .projectsMenu a:hover, .slicknav_nav .projectsMenu a:active {
+	color: #4EACBE;
 }
-/*#62D7ED;*/
-.workMenu:hover {
-	border-bottom: .1em solid #66B11F;
-}
-/*#7FDD27*/
 
-.contactMenu:hover {
-	border-bottom: .1em solid #BD0755;
+.slicknav_nav .workMenu a:hover, .slicknav_nav .workMenu a:active {
+	color: #66B11F;
 }
-/*#EC096A*/
+
+.slicknav_nav .contactMenu a:hover, .slicknav_nav .contactMenu a:active {
+	color: #BD0755;
+}
+
+
+
 
 .slicknav_btn {
 	background-color: #999;
@@ -134,6 +139,12 @@ ul {
 	border-color: #BD0755; 
 }
 
+a.anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
+}
+
 
 
 /****** Media Queries (Hero and Headers) ******/
@@ -163,7 +174,26 @@ ul {
 		font-weight: bold;
 		margin: .5em;
 		color: #aaa;
+	}	
+
+
+	.homeMenu:hover {
+		border-bottom: .1em solid #DBDB6C;
 	}
+
+	.projectsMenu:hover {
+		border-bottom: .1em solid #4EACBE;
+	}
+	/*#62D7ED;*/
+	.workMenu:hover {
+		border-bottom: .1em solid #66B11F;
+	}
+	/*#7FDD27*/
+
+	.contactMenu:hover {
+		border-bottom: .1em solid #BD0755;
+	}
+	/*#EC096A*/
 }
 
 /* Medium screens (640px) */
@@ -174,6 +204,9 @@ ul {
 		margin: 25px; 
 	}
 	.sectionHeader { font-size: 200%; }
+	a.anchor {
+		top: -1.8em;
+	}
 }
  
 /* Large screens (1024px) */
@@ -184,6 +217,9 @@ ul {
 		margin: 40px; 
 	}
 	.sectionHeader { font-size: 250%; }
+	a.anchor {
+		top: -1.5em;
+	}
 }
 
 /****** Projects Grid ******/
@@ -222,6 +258,7 @@ ul {
 	bottom: 10px;
 
 }
+
 .li-img {
     position: absolute;
     display: block;
@@ -230,12 +267,13 @@ ul {
     background-size: cover;
 	width: 100%;
 	height: 100%;
-    opacity : .4;
+    opacity : .5;
 }
 
 .quicklist-img {
 	background-image: url('../img/quicklist.JPG');
 	background-position: 50% 55%;
+	opacity: .6;
 }
 
 .movieTimeline-img {
@@ -294,7 +332,28 @@ ul {
 
 .workItem {
 	height: 300px;
-	background-image: url('../img/hero.jpg');
+
+}
+
+.work-text {
+	vertical-align: middle;
+	width: 70%;
+	padding: 1em;
+	z-index: 100;
+	position: absolute;
+	bottom: 10px;
+}
+
+.work-img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+    opacity : .5;
+    background-image: url('../img/hero.jpg');
     background-size: cover;
 	background-position: 50% 60%;
 }
@@ -305,11 +364,13 @@ ul {
 @media screen and (min-width: 40rem) {
   .workItem {
   	height: 400px;
+  	font-size: 125%;
   }
 }
 
 @media screen and (min-width: 64rem) {
   .workItem {
   	height: 500px;
+  	font-size: 160%;
   }
 }
