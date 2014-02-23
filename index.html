@@ -4,95 +4,87 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>David Wong: web dev</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="js/owl.carousel.js"></script>
 		<script src="js/jquery.slicknav.min.js"></script>		
 		<script src="js/portfolio.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.css">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/slicknav.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" id="homeAnchor">
 			<ul id="menu">
-				<li><a href="#projectsAnchor" class="scroll">Projects</a></li>
-				<li><a href="#">Work</a></li>
-				<li><a href="#">Contact</a></li>
+				<li class="homeMenu"><a href="#homeAnchor" class="scroll">Home</a></li>
+				<li><a href="#projectsAnchor" class="scroll projectsMenu">Projects</a></li>
+				<li><a href="#workAnchor" class="scroll workMenu">Experience</a></li>
+				<li><a href="#contactAnchor" class="scroll contactMenu">Contact</a></li>
 			</ul>
 			<div class="hero">
 				<div class="introContent">
-					Hi, I'm David, a software developer experienced with full-stack web development, project management, and more. Delivering clean designs and straightforward user experiences, one app at a time. Based in the Sacramento region. 
+					Hi, I'm David, a software developer experienced with full-stack web development, project management, and more. Delivering clean design and delightful user experience, one app at a time. Based in the Sacramento region. 
 				</div>
 			</div>
 			<!--Pattern HTML-->
-			<div class="sectionHeader" id="projectsAnchor">Projects</div>
+			<div class="sectionHeader projectsHeader" id="projectsAnchor">Projects</div>
 			<div class="projectList">
 				<ul class="list img-list">
 					<li>
-						<a href="#" class="inner">
-<!-- 							<div class="li-img">
-								<img src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-							</div> -->
+						<a href="http://da-vid.github.io/Quicklist/" target="_blank" class="inner">
 							<div class="li-text">
-								<h4 class="li-head">Title of Content</h4>
-								<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
-								<p class="li-action">Read More</p>
+								<h4 class="li-head">Quicklist</h4>
+								<p class="li-summary">Simple web-based lists that are easy to use and share on the go.</p>
+								<p class="li-action">Check it out...</p>
 							</div>
-							<div class="li-img"></div>
+							<div class="li-img quicklist-img"></div>
 						</a>
 					</li>
 					<li>
-						<a href="#" class="inner">
-<!-- 							<div class="li-img">
-								<img src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-							</div> -->
+						<a href="http://da-vid.github.io/HotOrCold" target="_blank" class="inner">
 							<div class="li-text">
-								<h4 class="li-head">Title of Content</h4>
-								<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
-								<p class="li-action">Learn More</p>
-							</div>
-							<div class="li-img"></div>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="inner">
-<!-- 							<div class="li-img">
-								<img src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-							</div> -->
-							
-							<div class="li-text">
-								<h4 class="li-head">Title of Content</h4>
-								<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
-								<p class="li-action">Read More</p>
+								<h4 class="li-head">Hot Or Cold</h4>
+								<p class="li-summary">A mobile-friendly kids game that builds skills with numbers.</p>
+								<p class="li-action">Check it out...</p>
 							</div>							
-						<!-- <div class="li-img"></div> -->
+							<div class="li-img hotOrCold-img"></div>
 						</a>
 					</li>
 					<li>
-						<a href="#" class="inner">
-<!-- 							<div class="li-img">
-								<img src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-							</div> -->
+						<a href="http://da-vid.github.io/WeatherGame" target="_blank" class="inner">
 							<div class="li-text">
-								<h4 class="li-head">Title of Content</h4>
-								<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
-								<p class="li-action">Learn More</p>
-							</div>
+								<h4 class="li-head">Under The Weather</h4>
+								<p class="li-summary">A weather quiz game that tests your knowledge of current US weather trends.</p>
+								<p class="li-action">Check it out...</p>
+							</div>									
+							<div class="li-img underTheWeather-img"></div>				
 						</a>
-					</li>
+					</li>					
 					<li>
-						<a href="#" class="inner">
-<!-- 							<div class="li-img">
-								<img src="http://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-							</div> -->
+						<a href="http://da-vid.github.io/MovieGame/" target="_blank" class="inner">
 							<div class="li-text">
-								<h4 class="li-head">Title of Content</h4>
-								<p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p>
-								<p class="li-action">Read More</p>
+								<h4 class="li-head">Movie Timeline</h4>
+								<p class="li-summary">A game that tests your memory of movie history and your favorite stars.</p>
+								<p class="li-action">Check it out...</p>
 							</div>
+							<div class="li-img movieTimeline-img"></div>
 						</a>
 					</li>
+
+				
 				</ul>
 			</div>
+			<div class="sectionHeader workHeader" id="workAnchor">Experience</div>
+			<div id="workCarousel" class="owl-carousel">
+				<div class="workItem"> Intel Application Dev</div>
+				<div class="workItem"> Intel Systems Int </div>
+				<div class="workItem"> NASA </div>
+				<div class="workItem"> WOLV </div>
+				<div class="workItem"> Education </div>
+			</div>
+			<div class="sectionHeader contactHeader" id="contactAnchor">Contact</div>
 		</div>
 		<!-- Put this right before the </body> closing tag -->
 		<script>
