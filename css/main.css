@@ -54,7 +54,7 @@ ul {
 	background-color: #333;
 	border-radius: 10px;
 	width: 5em;
-}
+} 
 
 .homeMenu:hover {
 	border-bottom: .1em solid #DBDB6C;
@@ -91,7 +91,7 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('../img/hero1.JPG');
+    background-image: url('../img/hero1.JPG'); 
     background-size: cover;
 	background-position: 50% 60%;
 	width: 100%;
