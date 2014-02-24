@@ -13,14 +13,20 @@
          $("#workCarousel").owlCarousel({
  
     // Most important owl features
-    singleItem : true,
+    items : 2,
+    itemsDesktop : [1199,2],
+    itemsDesktopSmall : [980,1],
+    itemsTablet: [768,1],
+    itemsTabletSmall: false,
+    itemsMobile : [479,1],
+    singleItem : false,
  
      //Autoplay
     autoPlay : false,
     stopOnHover : false,
  
     // Navigation
-    navigation : true,
+    navigation : false,
     navigationText : ["Previous","Next"],
  
     //Pagination
