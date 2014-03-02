@@ -18,7 +18,7 @@ html, body {
 }
 
 html {
-	background-color: #000;
+	background-color: #111;
 	color: #ddd;
 }
 
@@ -36,7 +36,7 @@ ul {
 
 #menu {
 	display: none;
-	background-color: black;
+	background-color: #111;
 	z-index: 300;
 }
 
@@ -394,7 +394,7 @@ a.anchor {
 }
 
 .skills-img {
-	background-image: url('../img/hero2.jpg');
+	background-image: url('../img/hero2.JPG');
 	background-position: 80% 50%;
 	opacity: .3;
 }
@@ -493,7 +493,7 @@ a.anchor {
 
 .socialIcons {
 	text-align: center;
-	margin-bottom: 4em;
+	min-height: 14em;
 }
 
 .fa {
