@@ -19,7 +19,7 @@ html, body {
 
 html {
 	background-color: #000;
-	color: #eee;
+	color: #ddd;
 }
 
 ul {
@@ -107,6 +107,7 @@ ul {
 	margin: 10px;
 	max-width: 90%;
 	z-index: 100;
+	font-family: 'Arvo', sans-serif;
 }
 
 .headshot {
@@ -125,8 +126,9 @@ ul {
 	text-align: center;
 	font-size: 150%;
 	border-top: .1em solid;
-	padding: .3em 0 .3em 0;
+	padding: .8em 0 .3em 0;
 	color: #aaa;
+	clear: both;
 }
 
 .projectsHeader {
@@ -152,7 +154,7 @@ a.anchor {
 /****** Media Queries (Hero and Headers) ******/
 
 /* Any screen that can handle full menu width gets it*/
-@media (min-width: 26rem) { 
+@media (min-width: 28rem) { 
 	.slicknav_menu {
 		display:none;
 	}
@@ -295,19 +297,21 @@ a.anchor {
 .li-head {
   margin: 0;
   font-weight: normal;
-  font-size: 100%;
+  font-size: 100%;  
   color: #DBDB6C;
 }
 
 .li-summary {
   display: block; /*none;*/
   margin: 0;
-
+  font-family: 'Arvo', serif;
+  font-size: 80%;
 }
+
 .li-action {
   margin: 0;
   color: #bbb;
-  font-size: .8em;
+  font-size: 70%;
 }
 
 /****** Media Queries (Projects Grid) ******/
@@ -340,15 +344,36 @@ a.anchor {
 
 .workItem {
 	height: 300px;
+	position: relative;
 }
 
 .work-text {
 	vertical-align: middle;
-	width: 70%;
+	width: 90%;
 	padding: 1em;
 	z-index: 100;
 	position: absolute;
-	bottom: 10px;
+	bottom: 2em;
+}
+
+.work-head {
+	font-weight: normal;
+	font-size: 100%;
+	color: #DBDB6C;
+	margin: 0;
+}
+
+.work-summary {
+  display: block; /*none;*/
+  margin: 0;
+  font-family: 'Arvo', serif;
+  font-size: 80%;
+}
+
+.work-summary p {
+	margin-top: .5em;
+	margin-bottom: 0;
+	margin-left: 1em;
 }
 
 .work-img {
@@ -359,7 +384,19 @@ a.anchor {
     background-size: cover;
 	width: 100%;
 	height: 100%;
-    opacity : .3;	
+    opacity : .4;	
+}
+
+.experience-img {
+	background-image: url('../img/experience.jpg');
+	background-position: 80% 50%;
+	opacity: .3;
+}
+
+.skills-img {
+	background-image: url('../img/hero2.jpg');
+	background-position: 80% 50%;
+	opacity: .3;
 }
 
 .intel1-img {
@@ -382,6 +419,22 @@ a.anchor {
 	background-position: 50% 40%;
 }
 
+.swipeRight {
+	line-height: .5;
+	position: absolute;
+	bottom: 1.5em;
+	right: 1.5em;
+	color: #aaa;
+	font-family: 'Arvo', serif;
+	font-size: 65%;
+	z-index: 100;
+} 
+
+.swipeXL {
+	font-size: 120%;
+	bottom: 1em;
+	right: 1em;
+} 
 
 /****** Media Queries (Work Carousel) ******/
 
@@ -399,15 +452,235 @@ a.anchor {
   }
 }
 
-/****** Contact Section ******/
+/****** Skills ******/
+.skills {
+		margin: auto;
+		display: table;
+		position: absolute;
+		top: 60%; left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+		z-index: 100;
+		height: 80%;
+}
+
+.skillsHeader {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	padding-top: 1.5em;
+	font-size: 130%;
+	z-index: 100;
+	color: #DBDB6C;
+}
+
+.skills ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.panel {
+	display: table-cell;
+	padding: 1em;
+	font-family: 'Arvo', serif;
+	font-size: 100%;
+}
+
+/****** Connect Section ******/
 
 .socialIcons {
 	text-align: center;
-	margin-bottom: 5em;
+	margin-bottom: 4em;
 }
 
 .fa {
-	margin: .1em .2em 0 .2em;
+	margin: .1em .2em .2em .2em;
 	color: #bbb;
 }
 
+.githubLink:hover .fa,
+.githubLink:active .fa {
+	color: #333;
+}
+
+.linkedInLink:hover .fa, 
+.linkedInLink:active .fa {
+	color: #007bb6;
+}
+
+.gPlusLink:hover .fa,
+.gPlusLink:active .fa {
+	color: #dd4b39;
+}
+
+.twitterLink:hover .fa,
+.twitterLink:active .fa {
+	color: #00aced;
+}
+
+footer {
+	text-align: center;
+	font-size: 75%;
+	color: #666;
+}
+
+/****** Modals ******/
+
+		
+.reveal-modal-bg { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: rgba(0,0,0,.8);
+	z-index: 499;
+	display: none;
+	top: 0;
+	left: 0; 
+}
+
+.reveal-modal {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 500;
+	height: 100%;
+	margin-left: -50%;
+	width: 100%;
+	background-color: #ccc;
+	color: #333;
+	border: solid 1px #666;
+	overflow: auto;
+}
+
+.reveal-modal .close-reveal-modal {
+	font-size: 400%;
+	line-height: .5;
+	position: absolute;
+	top: 0px;
+	right: 11px;
+	color: #666;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	font-weight: bold;
+	cursor: pointer;
+} 
+
+.modalHeader {
+	position: relative;
+	width: 100%;
+	height: 7em;
+	font-size: 120%;
+}
+
+.modalHeader:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    background-size: cover;	
+	width: 100%;
+	height: 100%;
+    opacity : .9;
+}
+
+.modalTitle {
+	position: absolute;
+	bottom: 0;
+	margin: .6em;
+	max-width: 90%;
+	z-index: 100;
+}
+
+.modalBody {
+	padding: .5em;
+	font-size: 100%;
+	font-family: 'Arvo', serif;
+}
+
+.modalDetails {
+	margin: 1em;	
+	font-size: 85%;
+}
+
+.modalDetails .modalSectionHeader {
+	font-weight: 700;
+}
+
+.modalButton {
+	background-color: #666;
+	color: #ddd;
+	margin: .5em auto .5em auto;
+	width: 12em;
+	text-align: center;
+	border-radius: .5em;
+	font-size: 75%;
+	font-family: 'Oswald', sans-serif;
+}
+
+.openButton {
+	font-size: 125%;
+	padding: .2em;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 	
+	.reveal-modal {
+		top: 10%;
+		font-size: 150%;
+		height: auto;
+		max-height: 90%;
+		margin-left: -45%;
+		width: 90%;
+		border: solid 1px #666;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	}
+}
+ 
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+	.reveal-modal {
+		font-size: 170%;
+		margin-left: -30%;
+		width: 60%;
+	}
+
+	.modalBody {
+		padding: 1em;
+	}
+}
+
+#quicklistModal .modalHeader:after {
+	background-image: url('../img/quicklist.JPG'); 
+	background-position: 0% 40%;
+}
+
+#hotOrColdModal .modalHeader:after {
+	background-image: url('../img/hotOrCold.JPG'); 
+	background-position: 50% 45%;
+}
+
+#hotOrColdModal .modalTitle {
+	color: #ccc;
+}
+
+#underTheWeatherModal .modalHeader:after {
+	background-image: url('../img/underTheWeather1.JPG'); 
+	background-position: 40% 75%;
+}
+
+#movieTimelineModal .modalHeader:after {
+	background-image: url('../img/movieTimeline.JPG'); 
+	background-position: 0% 35%;
+	opacity: .5;
+}
+
+#movieTimelineModal .close-reveal-modal {
+	color: #333;
+}
