@@ -16,7 +16,7 @@
  
             // Most important owl features
             items : 2,
-            itemsDesktop : [1199,2],
+            itemsDesktop : [1199,1],
             itemsDesktopSmall : [980,1],
             itemsTablet: [768,1],
             itemsTabletSmall: false,
