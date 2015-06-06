@@ -116,7 +116,7 @@ ul {
 	height: 125px;
 	width: 125px;
 	border-radius: 300px;
-	background-image: url('../img/headshot.jpg');
+	background-image: url('../img/headshot2015.jpg');
 	background-size:cover;
 	margin-bottom: .6em;
 }
@@ -275,7 +275,7 @@ a.anchor {
 }
 
 .quicklist-img {
-	background-image: url('../img/quicklist.JPG');
+	background-image: url('../img/qlist1.jpg');
 	background-position: 50% 55%;
 	opacity: .6;
 }
@@ -659,7 +659,7 @@ footer {
 }
 
 #quicklistModal .modalHeader:after {
-	background-image: url('../img/quicklist.JPG'); 
+	background-image: url('../img/qlist1.jpg'); 
 	background-position: 0% 40%;
 }
 
