@@ -6,91 +6,306 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script src="js/owl.carousel.js"></script>
 		<script src="js/jquery.slicknav.min.js"></script>		
+		<script src="js/jquery.reveal.js"></script>		
 		<script src="js/portfolio.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700|Oswald:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/owl.carousel.css">
 		<link rel="stylesheet" href="css/owl.theme.css">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/slicknav.css" rel="stylesheet">
+		<link href="css/reveal.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-48582921-1', 'davidwong.net');
+			ga('send', 'pageview');
+
+		</script>
 	</head>
 	<body>
 		<div class="container" id="homeAnchor">
+			<header>
 			<ul id="menu">
-				<li class="homeMenu"><a href="#homeAnchor" class="scroll">Home</a></li>
-				<li><a href="#projectsAnchor" class="scroll projectsMenu">Projects</a></li>
-				<li><a href="#workAnchor" class="scroll workMenu">Experience</a></li>
-				<li><a href="#contactAnchor" class="scroll contactMenu">Contact</a></li>
+				<li class="menuItem homeMenu"><a href="#homeAnchor" class="scroll">Home</a></li>
+				<li class="menuItem projectsMenu"><a href="#projectsAnchor" class="scroll projectsMenu">Projects</a></li>
+				<li class="menuItem workMenu"><a href="#workAnchor" class="scroll workMenu">Experience </a></li>
+				<li class="menuItem contactMenu"><a href="#contactAnchor" class="scroll contactMenu">Connect</a></li>
 			</ul>
+			</header>
 			<div class="hero">
 				<div class="introContent">
-					Hi, I'm David, a software developer experienced with full-stack web development, project management, and more. Delivering clean design and delightful user experience, one app at a time. Based in the Sacramento region. 
+					<div class="headshot"></div>
+					Hi, I'm David, a software developer experienced with full-stack web development, agile project management, and more. Delivering clean design and delightful user experience, one app at a time. Based near Sacramento. 
 				</div>
 			</div>
-			<!--Pattern HTML-->
-			<div class="sectionHeader projectsHeader" id="projectsAnchor">Projects</div>
+			<div class="sectionHeader projectsHeader">
+				<a class="anchor" id="projectsAnchor"></a>
+				Projects
+			</div>
 			<div class="projectList">
 				<ul class="list img-list">
 					<li>
-						<a href="http://da-vid.github.io/Quicklist/" target="_blank" class="inner">
+						<a href="#" target="_blank" class="inner" data-reveal-id="quicklistModal">
 							<div class="li-text">
-								<h4 class="li-head">Quicklist</h4>
+								<h4 class="li-head">qList.cc</h4>
 								<p class="li-summary">Simple web-based lists that are easy to use and share on the go.</p>
-								<p class="li-action">Check it out...</p>
+								<p class="li-action">Click to learn more</p>
 							</div>
 							<div class="li-img quicklist-img"></div>
 						</a>
 					</li>
 					<li>
-						<a href="http://da-vid.github.io/HotOrCold" target="_blank" class="inner">
+						<a href="#" target="_blank" class="inner" data-reveal-id="hotOrColdModal">
 							<div class="li-text">
 								<h4 class="li-head">Hot Or Cold</h4>
-								<p class="li-summary">A mobile-friendly kids game that builds skills with numbers.</p>
-								<p class="li-action">Check it out...</p>
+								<p class="li-summary">A mobile-friendly childrens' game that builds basic numbers skills.</p>
+								<p class="li-action">Click to learn more</p>
 							</div>							
 							<div class="li-img hotOrCold-img"></div>
 						</a>
+						
 					</li>
 					<li>
-						<a href="http://da-vid.github.io/WeatherGame" target="_blank" class="inner">
+						<a href="#" target="_blank" class="inner" data-reveal-id="underTheWeatherModal">
 							<div class="li-text">
 								<h4 class="li-head">Under The Weather</h4>
-								<p class="li-summary">A weather quiz game that tests your knowledge of current US weather trends.</p>
-								<p class="li-action">Check it out...</p>
+								<p class="li-summary">A weather quiz game based on current US weather trends.</p>
+								<p class="li-action">Click to learn more</p>
 							</div>									
 							<div class="li-img underTheWeather-img"></div>				
 						</a>
 					</li>					
 					<li>
-						<a href="http://da-vid.github.io/MovieGame/" target="_blank" class="inner">
+						<a href="#" target="_blank" class="inner" data-reveal-id="movieTimelineModal">
 							<div class="li-text">
 								<h4 class="li-head">Movie Timeline</h4>
-								<p class="li-summary">A game that tests your memory of movie history and your favorite stars.</p>
-								<p class="li-action">Check it out...</p>
+								<p class="li-summary">A game that tests your memory of movie history and your favorite stars. </p>
+								<p class="li-action">Click to learn more</p>
 							</div>
 							<div class="li-img movieTimeline-img"></div>
 						</a>
 					</li>
-
-				
 				</ul>
 			</div>
-			<div class="sectionHeader workHeader" id="workAnchor">Experience</div>
-			<div id="workCarousel" class="owl-carousel">
-				<div class="workItem"> Intel Application Dev</div>
-				<div class="workItem"> Intel Systems Int </div>
-				<div class="workItem"> NASA </div>
-				<div class="workItem"> WOLV </div>
-				<div class="workItem"> Education </div>
+			<div class="sectionHeader workHeader">
+				<a class="anchor" id="workAnchor"></a>
+				Experience &amp; Skills
 			</div>
-			<div class="sectionHeader contactHeader" id="contactAnchor">Contact</div>
+			<div id="workCarousel" class="owl-carousel">
+				<div class="workItem"> 
+					<div class="work-text">
+						<!-- <h4 class="work-head">An experienced software developer</h4> -->
+						<div class="work-summary">
+						<p>I have more than ten years of experience in application development, applying a broad range of languages and technologies to deliver efficient, usable web-based tools to consumers and enterprises.</p>
+						</div>
+					</div>
+					<div class="swipeRight swipeXL">Swipe to learn more &gt;&gt;</div>
+					<div class="work-img experience-img"></div>
+				</div>
+				<div class="workItem">
+					<div class="skillsHeader">Technologies &amp; Skills</div>
+					<div class="skills">
+						<div class="techSkills panel">
+							<ul>						
+								<li>HTML5, CSS</li>
+								<li>jQuery, AngularJS, PHP</li>											
+								<li>T-SQL, SQL Server, MySQL</li>						
+								<li>AJAX, JSON</li>
+								<li>C#, ASP.NET</li>	
+								<li>C++, C, Java, x86 assembly</li>
+							</ul>
+						</div>
+						<div class="softSkills panel">
+							<ul>
+								<li>Agile project management</li>
+								<li>Technical trainer</li>					
+								<li>UX &amp; UI design</li>
+							</ul>
+						</div>
+					</div>
+					<div class="swipeRight">Swipe to learn more &gt;&gt;</div>
+					<div class="work-img skills-img"></div>
+				</div>
+				<div class="workItem"> 
+					<div class="work-text">
+						<h4 class="work-head">Application Developer @ Intel</h4>
+						<div class="work-summary">
+							<p>Developer of intranet apps used to authorize and provision access to hundreds of systems across Intel.</p>
+							<p>Lead a team through major releases, applying agile principles.</p>
+							<p>Negotiated with customers to develop high-value requirements.</p>
+							<p>Trained users and support teams worldwide, and designed training material.</p>
+							<p>Technologies: C#, C, ASP.NET, SQL Server, HTML, CSS</p>
+						</div>
+					</div>
+					<div class="swipeRight">Swipe to learn more &gt;&gt;</div>
+					<div class="work-img intel1-img"></div>
+				</div>
+				<div class="workItem"> 
+					<div class="work-text">
+						<h4 class="work-head">Performance Engineer @ Intel</h4>
+						<div class="work-summary">
+							<p>Developer of performance testing software suites used to measure server processor performance against industry-standard benchmarks.</p>
+							<p>Technologies: C++, x86 assembly</p>
+						</div>
+
+					</div>
+					<div class="swipeRight">Swipe to learn more &gt;&gt;</div>
+					<div class="work-img intel2-img"></div>
+				</div>
+				<div class="workItem"> 
+					<div class="work-text">
+						<h4 class="work-head">Intern @ NASA</h4>
+						<div class="work-summary">
+							<p>Provided software support for the development of magnetic bearing rigs used in aeronautic research.  Conceived of and implemented software features that enabled and simplified research tasks.</p>
+							<p>Technologies: C++, C</p>
+						</div>
+
+					</div>
+					<div class="swipeRight">Swipe to see more &gt;&gt;</div>
+					<div class="work-img nasa-img"></div>
+				</div>
+				<div class="workItem"> 
+					<div class="work-text">
+						<h4 class="work-head">Education</h4>
+						<div class="work-summary">
+							<p>B.S. Computer Science Engineering @ U of Michigan</p>
+							<p>M.B.A. @ Drexel University</p>
+							<p>Technologies: C++, HTML, CSS, PHP</p>
+						</div>
+					</div>
+					<div class="work-img umich-img"></div>
+				</div>
+			</div>
+			
+			<div class="sectionHeader contactHeader">
+				<a class="anchor" id="contactAnchor"></a>
+				Connect
+			</div>
+			<div class="socialIcons">
+				<a href="https://github.com/da-vid" class="githubLink"><i class="fa fa-github-square fa-5x"></i></a>
+				<a href="http://www.linkedin.com/in/wongd/" class="linkedInLink"><i class="fa fa-linkedin-square fa-5x"></i></a>
+				<a href="https://plus.google.com/+DavidWongIsHere/" class="gPlusLink"><i class="fa fa-google-plus-square fa-5x"></i></a>
+				<a href="https://twitter.com/da_vid" class="twitterLink"><i class="fa fa-twitter-square fa-5x"></i></a>
+			</div>
+			<footer>
+				Some images licensed under Creative Commons by Flickr users: huangjiahui (Intel logo @ RNB), Nick Knupffer (Bunny men), Dan Ketterick (NASA Glenn hangar), larrysphatpage (Michigan Stadium)
+			</footer>
 		</div>
-		<!-- Put this right before the </body> closing tag -->
-		<script>
-			$(function(){		
-				$('#menu').slicknav();
-			});
-		</script>
+		<div id="quicklistModal" class="reveal-modal">
+			<div class="modalHeader">
+				<div class="modalTitle">qList.cc</div>
+			</div>
+			<div class="modalBody">
+				<div class="modalDescription">
+					Quickly create and share simple web-based lists.  Offers real-time updates for instant collaboration and a mobile-friendly, responsive interface.  
+				</div>
+				<div class ="modalDetails">
+					<div class="modalSectionHeader">Technologies &amp; Frameworks</div>
+					<ul class="modalList">
+						<li class="modalListItem">AngularJS</li>
+						<li class="modalListItem">Firebase</li>
+					</ul>
+				</div>
+				<div class="modalButton openButton">
+					<a href="http://qlist.cc" target="_blank">Open the site</a>
+				</div>
+				<div class="modalButton">
+					<a href="https://github.com/da-vid/QuicklistNG" target="_blank">
+						<i class="fa fa-github-square fa-2x"></i>View in GitHub 
+					</a>				
+				</div>
+			</div>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<div id="hotOrColdModal" class="reveal-modal">
+			<div class="modalHeader">
+				<div class="modalTitle">Hot Or Cold</div>
+			</div>
+			<div class="modalBody">
+				<div class="modalDescription">
+					In this classic kids' game, try to guess the magic number in as few guesses as possible.  Play on desktop browsers or mobile, or install as a mobile web app.
+				</div>
+				<div class ="modalDetails">
+					<div class="modalSectionHeader">Technologies &amp; Frameworks</div>
+					<ul class="modalList">
+						<li class="modalListItem">jQuery</li>
+						<li class="modalListItem">HTML 5</li>						
+						<li class="modalListItem">CSS</li>
+					</ul>
+				</div>
+				<div class="modalButton openButton">
+					<a href="http://da-vid.github.io/HotOrCold" target="_blank">Open the site</a>
+				</div>
+				<div class="modalButton">
+					<a href="https://github.com/da-vid/HotOrCold" target="_blank">
+						<i class="fa fa-github-square fa-2x"></i>View in GitHub 
+					</a>				
+				</div>
+			</div>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<div id="underTheWeatherModal" class="reveal-modal">
+			<div class="modalHeader">
+				<div class="modalTitle">Under the Weather</div>
+			</div>
+			<div class="modalBody">
+				<div class="modalDescription">
+					This game shows you today's weather in... somewhere.  You'll guess the city.  Responsive, mobile-friendly design.  
+				</div>
+				<div class ="modalDetails">
+					<div class="modalSectionHeader">Technologies &amp; Frameworks</div>
+					<ul class="modalList">
+						<li class="modalListItem">AngularJS</li>						
+						<li class="modalListItem">AJAX/JSON</li>
+						<li class="modalListItem">HTML 5</li>
+						<li class="modalListItem">Bootstrap</li>
+						<li class="modalListItem">Today's weather data provided by the Ultimate Weather Forecasts API.</li>						
+					</ul>
+				</div>
+				<div class="modalButton openButton">
+					<a href="http://da-vid.github.io/WeatherGame" target="_blank">Open the site</a>
+				</div>
+				<div class="modalButton">
+					<a href="https://github.com/da-vid/WeatherGame" target="_blank">
+						<i class="fa fa-github-square fa-2x"></i>View in GitHub 
+					</a>				
+				</div>
+			</div>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<div id="movieTimelineModal" class="reveal-modal">
+			<div class="modalHeader">
+				<div class="modalTitle">Movie Timeline</div>
+			</div>
+			<div class="modalBody">
+				<div class="modalDescription">
+					In this game, you'll be shown a list of movies each starring the same Hollywood actor.  Put them in order by release date as quickly as you can!   
+				</div>
+				<div class ="modalDetails">
+					<div class="modalSectionHeader">Technologies &amp; Frameworks</div>
+					<ul class="modalList">
+						<li class="modalListItem">AngularJS</li>
+						<li class="modalListItem">jQuery</li>
+						<li class="modalListItem">AJAX/JSON</li>
+						<li class="modalListItem">Movie data provided by themoviedb.org API.</li>
+						<li class="modalListItem">Sorry, not mobile-friendly - play on your laptop or desktop!</li>			
+					</ul>
+				</div>
+				<div class="modalButton openButton">
+					<a href="http://da-vid.github.io/MovieGame" target="_blank">Open the site</a>
+				</div>
+				<div class="modalButton">
+					<a href="https://github.com/da-vid/MovieGame" target="_blank">
+						<i class="fa fa-github-square fa-2x"></i>View in GitHub 
+					</a>				
+				</div>
+			</div>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>	
 	</body>
 </html>

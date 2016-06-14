@@ -1,3 +1,5 @@
+
+
 /****** General ******/
 
 *, *:before, *:after {
@@ -18,8 +20,8 @@ html, body {
 }
 
 html {
-	background-color: #000;
-	color: #eee;
+	background-color: #111;
+	color: #ddd;
 }
 
 ul {
@@ -36,7 +38,7 @@ ul {
 
 #menu {
 	display: none;
-	background-color: black;
+	background-color: #111;
 	z-index: 300;
 }
 
@@ -53,26 +55,28 @@ ul {
 	font-size: 120%;
 	background-color: #333;
 	border-radius: 10px;
-	width: 5em;
+	width: 5.5em;
+} 
+
+.slicknav_nav a:hover {
+	background-color: #333;
+} 
+
+.slicknav_nav .homeMenu a:hover, .slicknav_nav .homeMenu a:active {
+	color: #DBDB6C;
 }
 
-.homeMenu:hover {
-	border-bottom: .1em solid #DBDB6C;
+.slicknav_nav .projectsMenu a:hover, .slicknav_nav .projectsMenu a:active {
+	color: #4EACBE;
 }
 
-.projectsMenu:hover {
-	border-bottom: .1em solid #4EACBE;
+.slicknav_nav .workMenu a:hover, .slicknav_nav .workMenu a:active {
+	color: #66B11F;
 }
-/*#62D7ED;*/
-.workMenu:hover {
-	border-bottom: .1em solid #66B11F;
-}
-/*#7FDD27*/
 
-.contactMenu:hover {
-	border-bottom: .1em solid #BD0755;
+.slicknav_nav .contactMenu a:hover, .slicknav_nav .contactMenu a:active {
+	color: #BD0755;
 }
-/*#EC096A*/
 
 .slicknav_btn {
 	background-color: #999;
@@ -91,12 +95,12 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('../img/hero1.JPG');
+    background-image: url('../img/hero1.JPG'); 
     background-size: cover;
-	background-position: 50% 60%;
+	background-position: 0% 60%;
 	width: 100%;
 	height: 100%;
-    opacity : .2;
+    opacity : .3;
 }
 
 .introContent {
@@ -105,21 +109,28 @@ ul {
 	margin: 10px;
 	max-width: 90%;
 	z-index: 100;
+	font-family: 'Arvo', sans-serif;
+}
+
+.headshot {
+	height: 125px;
+	width: 125px;
+	border-radius: 300px;
+	background-image: url('../img/headshot2015.jpg');
+	background-size:cover;
+	margin-bottom: .6em;
 }
 
 /****** Section Headers ******/
 
 .sectionHeader {
-	font-family: 'PT Sans Narrow', sans-serif;
-	font-weight: bold;
+	font-family: 'Oswald', sans-serif;
 	text-align: center;
 	font-size: 150%;
 	border-top: .1em solid;
-	padding: .3em 0 .3em 0;
-	/*background-color: #565656;*/
-	/*color: transparent;*/
-	/*text-shadow: 0px 2px 3px rgba(200,200,200,0.5);*/
+	padding: .8em 0 .3em 0;
 	color: #aaa;
+	clear: both;
 }
 
 .projectsHeader {
@@ -134,12 +145,18 @@ ul {
 	border-color: #BD0755; 
 }
 
+a.anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
+}
+
 
 
 /****** Media Queries (Hero and Headers) ******/
 
 /* Any screen that can handle full menu width gets it*/
-@media (min-width: 26rem) { 
+@media (min-width: 28rem) { 
 	.slicknav_menu {
 		display:none;
 	}
@@ -160,10 +177,28 @@ ul {
 	#menu li {
 		display: inline;
 		font-size: 150%;
-		font-weight: bold;
 		margin: .5em;
 		color: #aaa;
+	}	
+
+
+	.homeMenu:hover {
+		border-bottom: .1em solid #DBDB6C;
 	}
+
+	.projectsMenu:hover {
+		border-bottom: .1em solid #4EACBE;
+	}
+	/*#62D7ED;*/
+	.workMenu:hover {
+		border-bottom: .1em solid #66B11F;
+	}
+	/*#7FDD27*/
+
+	.contactMenu:hover {
+		border-bottom: .1em solid #BD0755;
+	}
+	/*#EC096A*/
 }
 
 /* Medium screens (640px) */
@@ -173,7 +208,12 @@ ul {
 		max-width: 70%; 
 		margin: 25px; 
 	}
-	.sectionHeader { font-size: 200%; }
+	.sectionHeader { font-size: 180%; }
+	a.anchor { top: -1.8em; }
+	.headshot { 
+		height: 200px; 
+		width: 200px; 
+	}
 }
  
 /* Large screens (1024px) */
@@ -183,7 +223,8 @@ ul {
 		max-width: 60%; 
 		margin: 40px; 
 	}
-	.sectionHeader { font-size: 250%; }
+	.sectionHeader { font-size: 225%; }
+	a.anchor { top: -1.5em; }
 }
 
 /****** Projects Grid ******/
@@ -212,7 +253,6 @@ ul {
   overflow: hidden;
 }
 
-
 .li-text {
 	vertical-align: middle;
 	width: 70%;
@@ -222,6 +262,7 @@ ul {
 	bottom: 10px;
 
 }
+
 .li-img {
     position: absolute;
     display: block;
@@ -230,12 +271,13 @@ ul {
     background-size: cover;
 	width: 100%;
 	height: 100%;
-    opacity : .4;
+    opacity : .5;
 }
 
 .quicklist-img {
-	background-image: url('../img/quicklist.JPG');
+	background-image: url('../img/qlist1.jpg');
 	background-position: 50% 55%;
+	opacity: .6;
 }
 
 .movieTimeline-img {
@@ -256,16 +298,22 @@ ul {
 
 .li-head {
   margin: 0;
+  font-weight: normal;
+  font-size: 100%;  
+  color: #DBDB6C;
 }
+
 .li-summary {
   display: block; /*none;*/
   margin: 0;
-
+  font-family: 'Arvo', serif;
+  font-size: 80%;
 }
+
 .li-action {
   margin: 0;
-  color: #999;
-  font-size: .8em;
+  color: #bbb;
+  font-size: 70%;
 }
 
 /****** Media Queries (Projects Grid) ******/
@@ -292,24 +340,349 @@ ul {
 
 /****** Work Carousel ******/
 
-.workItem {
-	height: 300px;
-	background-image: url('../img/hero.jpg');
-    background-size: cover;
-	background-position: 50% 60%;
+#workCarousel {
+	margin-bottom: 1em;
 }
 
+.workItem {
+	height: 300px;
+	position: relative;
+}
+
+.work-text {
+	vertical-align: middle;
+	width: 90%;
+	padding: 1em;
+	z-index: 100;
+	position: absolute;
+	bottom: 2em;
+}
+
+.work-head {
+	font-weight: normal;
+	font-size: 100%;
+	color: #DBDB6C;
+	margin: 0;
+}
+
+.work-summary {
+  display: block; /*none;*/
+  margin: 0;
+  font-family: 'Arvo', serif;
+  font-size: 80%;
+}
+
+.work-summary p {
+	margin-top: .5em;
+	margin-bottom: 0;
+	margin-left: 1em;
+}
+
+.work-img {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+    opacity : .4;	
+}
+
+.experience-img {
+	background-image: url('../img/experience.jpg');
+	background-position: 80% 50%;
+	opacity: .3;
+}
+
+.skills-img {
+	background-image: url('../img/hero2.JPG');
+	background-position: 80% 50%;
+	opacity: .3;
+}
+
+.intel1-img {
+	background-image: url('../img/intel1.jpg');
+	background-position: 50% 55%;
+}
+
+.intel2-img {
+	background-image: url('../img/intel2.jpg');
+	background-position: 50% 40%;
+}
+
+.nasa-img {
+	background-image: url('../img/nasa.jpg');
+	background-position: 50% 25%;
+}
+
+.umich-img {
+	background-image: url('../img/umich.jpg');
+	background-position: 50% 40%;
+}
+
+.swipeRight {
+	line-height: .5;
+	position: absolute;
+	bottom: 1.5em;
+	right: 1.5em;
+	color: #aaa;
+	font-family: 'Arvo', serif;
+	font-size: 65%;
+	z-index: 100;
+} 
+
+.swipeXL {
+	font-size: 120%;
+	bottom: 1em;
+	right: 1em;
+} 
 
 /****** Media Queries (Work Carousel) ******/
 
 @media screen and (min-width: 40rem) {
   .workItem {
   	height: 400px;
+  	font-size: 125%;
   }
 }
 
 @media screen and (min-width: 64rem) {
   .workItem {
   	height: 500px;
+  	font-size: 160%;
   }
+}
+
+/****** Skills ******/
+.skills {
+		margin: auto;
+		display: table;
+		position: absolute;
+		top: 60%; left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+		z-index: 100;
+		height: 80%;
+}
+
+.skillsHeader {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	padding-top: 1.5em;
+	font-size: 130%;
+	z-index: 100;
+	color: #DBDB6C;
+}
+
+.skills ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.panel {
+	display: table-cell;
+	padding: 1em;
+	font-family: 'Arvo', serif;
+	font-size: 100%;
+}
+
+/****** Connect Section ******/
+
+.socialIcons {
+	text-align: center;
+	min-height: 14em;
+}
+
+.fa {
+	margin: .1em .2em .2em .2em;
+	color: #bbb;
+}
+
+.githubLink:hover .fa,
+.githubLink:active .fa {
+	color: #333;
+}
+
+.linkedInLink:hover .fa, 
+.linkedInLink:active .fa {
+	color: #007bb6;
+}
+
+.gPlusLink:hover .fa,
+.gPlusLink:active .fa {
+	color: #dd4b39;
+}
+
+.twitterLink:hover .fa,
+.twitterLink:active .fa {
+	color: #00aced;
+}
+
+footer {
+	text-align: center;
+	font-size: 75%;
+	color: #666;
+}
+
+/****** Modals ******/
+
+		
+.reveal-modal-bg { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: rgba(0,0,0,.8);
+	z-index: 499;
+	display: none;
+	top: 0;
+	left: 0; 
+}
+
+.reveal-modal {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 500;
+	height: 100%;
+	margin-left: -50%;
+	width: 100%;
+	background-color: #ccc;
+	color: #333;
+	border: solid 1px #666;
+	overflow: auto;
+}
+
+.reveal-modal .close-reveal-modal {
+	font-size: 400%;
+	line-height: .5;
+	position: absolute;
+	top: 0px;
+	right: 11px;
+	color: #666;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	font-weight: bold;
+	cursor: pointer;
+} 
+
+.modalHeader {
+	position: relative;
+	width: 100%;
+	height: 7em;
+	font-size: 120%;
+}
+
+.modalHeader:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    background-size: cover;	
+	width: 100%;
+	height: 100%;
+    opacity : .9;
+}
+
+.modalTitle {
+	position: absolute;
+	bottom: 0;
+	margin: .6em;
+	max-width: 90%;
+	z-index: 100;
+}
+
+.modalBody {
+	padding: .5em;
+	font-size: 100%;
+	font-family: 'Arvo', serif;
+}
+
+.modalDetails {
+	margin: 1em;	
+	font-size: 85%;
+}
+
+.modalDetails .modalSectionHeader {
+	font-weight: 700;
+}
+
+.modalButton {
+	background-color: #666;
+	color: #ddd;
+	margin: .5em auto .5em auto;
+	width: 12em;
+	text-align: center;
+	border-radius: .5em;
+	font-size: 75%;
+	font-family: 'Oswald', sans-serif;
+}
+
+.openButton {
+	font-size: 125%;
+	padding: .2em;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 	
+	.reveal-modal {
+		top: 10%;
+		font-size: 150%;
+		height: auto;
+		max-height: 90%;
+		margin-left: -45%;
+		width: 90%;
+		border: solid 1px #666;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	}
+}
+ 
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+	.reveal-modal {
+		font-size: 170%;
+		margin-left: -30%;
+		width: 60%;
+	}
+
+	.modalBody {
+		padding: 1em;
+	}
+}
+
+#quicklistModal .modalHeader:after {
+	background-image: url('../img/qlist1.jpg'); 
+	background-position: 0% 40%;
+}
+
+#hotOrColdModal .modalHeader:after {
+	background-image: url('../img/hotOrCold.JPG'); 
+	background-position: 50% 45%;
+}
+
+#hotOrColdModal .modalTitle {
+	color: #ccc;
+}
+
+#underTheWeatherModal .modalHeader:after {
+	background-image: url('../img/underTheWeather1.JPG'); 
+	background-position: 40% 75%;
+}
+
+#movieTimelineModal .modalHeader:after {
+	background-image: url('../img/movieTimeline.JPG'); 
+	background-position: 0% 35%;
+	opacity: .5;
+}
+
+#movieTimelineModal .close-reveal-modal {
+	color: #333;
 }
