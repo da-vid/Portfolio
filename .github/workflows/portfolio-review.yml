@@ -3,9 +3,6 @@ name: Publish portfolio review
 on:
   push:
     branches: [gh-pages]
-    paths:
-      - .github/workflows/portfolio-review.yml
-      - .github/portfolio-review-revision
 
 concurrency:
   group: portfolio-pages-review
@@ -17,6 +14,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      pages: read
     steps:
       - uses: actions/checkout@v6
       - name: Read the selected portfolio revision
@@ -51,6 +52,22 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: ${{ runner.temp }}/pages
+
+      # Branch-based Pages also publishes the legacy site on each push. Publish
+      # the combined artifact last so the legacy build cannot erase /review/.
+      - name: Wait for GitHub’s branch-based Pages build
+        timeout-minutes: 15
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [[ "$(gh api "repos/$GITHUB_REPOSITORY/pages" --jq .build_type)" == "legacy" ]]; then
+            while true; do
+              status=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs?head_sha=$GITHUB_SHA" \
+                --jq '[.workflow_runs[] | select(.path == "dynamic/pages/pages-build-deployment")][0].status // "pending"')
+              [[ "$status" == "completed" ]] && break
+              sleep 5
+            done
+          fi
 
   deploy:
     needs: build
