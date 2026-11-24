@@ -18,7 +18,6 @@ const { project, next } = Astro.props;
     <header class="case-head">
       <div class="shell">
         <a class="back" href={sitePath("/#projects")}>{site.projectPage.allProjects}</a>
-        <p class="meta">{project.category}</p>
         <h1 class="display">{project.title}</h1>
         <p class="lead">{project.intro}</p>
         <a class="button" href={project.url}><Roll text={project.openButton} /></a>
