@@ -1,0 +1,52 @@
+---
+import { sitePath } from "../lib/site-path";
+import Roll from "../components/Roll.astro";
+import { site } from "../data/projects";
+import "../styles/site.css";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  home?: boolean;
+}
+const { title, description, image, home = false } = Astro.props;
+const { header, footer } = site;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f1ec" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {image && <meta property="og:image" content={new URL(sitePath(image), Astro.site).href} />}
+    {import.meta.env.BASE_URL !== "/" && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{header.skipLink}</a>
+    <header class="shell site-header">
+      <a class="wordmark" href={sitePath("/")} aria-label={header.homeLabel}>
+        {home ? <h1>{header.wordmark}</h1> : header.wordmark}<span>{header.wordmarkAccent}</span>
+      </a>
+      <nav aria-label={header.navigationLabel}>
+        <a href={sitePath("/#projects")}><Roll text={header.projects} /></a>
+        <a href={sitePath("/#experience")}><Roll text={header.experience} /></a>
+        <a class="contact-link" href="#contact"><Roll text={header.contact} /></a>
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer id="contact">
+      <div class="shell">
+        <h2>{footer.heading}</h2>
+        <p>{footer.invitation}</p>
+        <a class="button" href={footer.contactUrl}><Roll text={footer.contactLabel} /></a>
+        <div class="footline"><span>{site.name}</span><a href={footer.profileUrl}>{footer.profileLabel}</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
