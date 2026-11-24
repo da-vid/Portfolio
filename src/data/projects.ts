@@ -14,7 +14,7 @@ export const site = {
   home: {
     pageTitle: "David Wong — Custom software",
     description: "I build custom software for the people doing the work. Explore Lineup Helper, qList, and my background in enterprise IT and application development.",
-    intro: "I build custom software for small businesses. I start with the people doing the work and the tools they wish they had.",
+    intro: "I build custom software for businesses and professionals. I start with the people doing the work and the tools they wish they had.",
     projectsButton: "Explore my projects",
     projectsHeading: "Selected projects",
     storyLink: "Read project story",
@@ -25,7 +25,7 @@ export const site = {
     entries: [
       {
         title: "Intel",
-        text: "I developed IT security tools, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers advising them on integrations of their software with our APIs and hardware features.",
+        text: "I developed security apps used by hundreds of thousands, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers to conceive and build user-friendly integrations of their software with our APIs and hardware features.",
       },
       {
         title: "NASA",
@@ -37,7 +37,7 @@ export const site = {
       },
       {
         title: "At home",
-        text: "Building tools to help our family and families like ours, including the qList app for quick shared lists.",
+        text: "Building small tools to help our family and families like ours, including the qList app for quick shared lists.",
       },
       {
         title: "Education",
@@ -74,7 +74,7 @@ export const projects = [
     approach: "With Lineup Helper, we can start with the players available that day, build the batting order and defense, and check our substitutions against the rules. If you’d like to try it, load the sample roster and put together a starting lineup.",
     cover: "/images/pitcher.webp",
     image: "/images/live-game.webp",
-    imageAlt: "Lineup Helper in the top of the second inning. Players 10 and 11 are now in left and center field, and the batting order shows their new slots.",
+    imageAlt: "Lineup Helper in the top of the second inning. Olivia is in left field, and Amelia has just replaced Lily in center field and the eighth batting slot.",
     caption: "Players come off the bench in the second inning of a sample game. Lineup Helper tracks player availability and usage and keeps the batting order and defense in sync.",
     tint: "#42336d",
   },
