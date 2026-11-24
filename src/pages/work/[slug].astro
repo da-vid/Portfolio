@@ -24,7 +24,9 @@ const { project, next } = Astro.props;
         <a class="button" href={project.url}><Roll text={project.openButton} /></a>
       </div>
     </header>
-    <div class="case-cover"><img src={sitePath(project.cover)} alt="" style={`view-transition-name: cover-${project.slug}`} /></div>
+    <div class:list={["case-cover", { "case-cover--pitcher": project.slug === "lineup-helper" }]}>
+      <img src={sitePath(project.cover)} alt="" style={`view-transition-name: cover-${project.slug}`} />
+    </div>
     <div class="shell story">
       <h2>{project.headline}</h2>
       <div><p>{project.story}</p><p>{project.approach}</p></div>
