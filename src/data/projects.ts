@@ -14,7 +14,6 @@ export const site = {
   home: {
     pageTitle: "David Wong — Custom software",
     description: "I build custom software for the people doing the work. Explore Lineup Helper, qList, and my background in enterprise IT and application development.",
-    role: "Software developer",
     intro: "I build custom software for small businesses. I start with the people doing the work and the tools they wish they had.",
     projectsButton: "Explore my projects",
     projectsHeading: "Selected projects",
@@ -26,11 +25,19 @@ export const site = {
     entries: [
       {
         title: "Intel",
-        text: "I developed IT security tools, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers enabling them to integrate their software with our hardware features.",
+        text: "I developed IT security tools, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers advising them on integrations of their software with our APIs and hardware features.",
       },
       {
         title: "NASA",
         text: "As an intern, I wrote software that helped aeronautics researchers run experiments and make new discoveries.",
+      },
+      {
+        title: "Softball assistant coach",
+        text: "I built tools to help my daughter's coaching staff manage game day substitutions and scout upcoming opponents.",
+      },
+      {
+        title: "At home",
+        text: "Building tools to help our family and families like ours, including the qList app for quick shared lists.",
       },
       {
         title: "Education",

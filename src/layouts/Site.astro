@@ -8,8 +8,9 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  home?: boolean;
 }
-const { title, description, image } = Astro.props;
+const { title, description, image, home = false } = Astro.props;
 const { header, footer } = site;
 ---
 <!doctype html>
@@ -29,7 +30,9 @@ const { header, footer } = site;
   <body>
     <a class="skip-link" href="#main">{header.skipLink}</a>
     <header class="shell site-header">
-      <a class="wordmark" href={sitePath("/")} aria-label={header.homeLabel}>{header.wordmark}<span>{header.wordmarkAccent}</span></a>
+      <a class="wordmark" href={sitePath("/")} aria-label={header.homeLabel}>
+        {home ? <h1>{header.wordmark}</h1> : header.wordmark}<span>{header.wordmarkAccent}</span>
+      </a>
       <nav aria-label={header.navigationLabel}>
         <a href={sitePath("/#projects")}><Roll text={header.projects} /></a>
         <a href={sitePath("/#experience")}><Roll text={header.experience} /></a>
