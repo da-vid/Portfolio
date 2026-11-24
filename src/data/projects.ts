@@ -21,15 +21,15 @@ export const site = {
   },
   experience: {
     heading: "Experience",
-    intro: "At Intel, I built tools for people who needed access to hundreds of internal systems. At home, we wanted a better grocery list. Both projects started with listening.",
+    intro: "At Intel, I built security apps used daily by 100k+ employees. At home, we wanted a better grocery list. Both projects started with listening.",
     entries: [
       {
         title: "Intel",
-        text: "I developed security apps used by hundreds of thousands, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers to conceive and build user-friendly integrations of their software with our APIs and hardware features.",
+        text: "I developed apps enabling access to 100s of internal systems, led a team through major releases, and trained users and support teams worldwide. I also partnered with our largest customers to conceive of and build valuable features in their software using our APIs and hardware.",
       },
       {
         title: "NASA",
-        text: "As an intern, I wrote software that helped aeronautics researchers run experiments and make new discoveries.",
+        text: "I wrote software that helped aeronautics researchers run experiments and make new discoveries.",
       },
       {
         title: "Softball assistant coach",
@@ -37,7 +37,7 @@ export const site = {
       },
       {
         title: "At home",
-        text: "Building small tools to help our family and families like ours, including the qList app for quick shared lists.",
+        text: "Building tools to help our family and families like ours, including the qList app for quick shared lists.",
       },
       {
         title: "Education",
@@ -70,8 +70,8 @@ export const projects = [
     category: "Fastpitch softball",
     headline: "Getting more girls into the game.",
     intro: "A lineup and substitution tool for fastpitch coaches who want to give more players time on the field.",
-    story: "I built Lineup Helper while coaching my daughter’s softball team. The coaching staff wanted to get more girls into the game. A substitution that looked simple from the dugout could affect our options later, and keeping the fastpitch rules straight took attention away from the players.",
-    approach: "With Lineup Helper, we can start with the players available that day, build the batting order and defense, and check our substitutions against the rules. If you’d like to try it, load the sample roster and put together a starting lineup.",
+    story: "I built Lineup Helper while coaching my daughter’s softball team. The coaching staff wanted to get more girls into the game. A substitution that looked simple could affect our options later, and keeping the fastpitch rules straight took attention away from the players.",
+    approach: "With Lineup Helper, we can start with the players available that day, build the batting order and defense, and check our substitutions against the rules. If you’d like to try it, load a sample roster and put together a starting lineup.",
     cover: "/images/pitcher.webp",
     image: "/images/live-game.webp",
     imageAlt: "Lineup Helper in the top of the second inning. Olivia is in left field, and Amelia has just replaced Lily in center field and the eighth batting slot.",
@@ -89,7 +89,7 @@ export const projects = [
     headline: "From sticky notes to one shared list.",
     intro: "A grocery list for our shopping trips that anyone in the family can update, even after someone has left for the grocery run.",
     story: "Our grocery list lived on sticky notes. I wanted anyone to be able to add what we needed and whoever went shopping to have the same list in hand.",
-    approach: "I built qList to make errands an updates easy. Type an item, send the link, and everyone can work from the same list. Anyone can add one more thing while someone in the grocery aisle checks off what they’ve picked up.",
+    approach: "I built qList to make errands and updates easy. Just send the link, and everyone can work from the same list. Anyone can add one more thing while someone in the grocery aisle checks off what they’ve picked up.",
     cover: "/images/groceries.webp",
     image: "/images/grocery-run.webp",
     imageAlt: "A qList titled Saturday grocery run. Milk, eggs, and brown sugar are checked off. Coffee beans, lemons, rolled oats, and cinnamon sticks are still on the list.",
