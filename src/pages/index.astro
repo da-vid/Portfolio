@@ -1,0 +1,49 @@
+---
+import { sitePath } from "../lib/site-path";
+import Site from "../layouts/Site.astro";
+import Roll from "../components/Roll.astro";
+import { projects, site } from "../data/projects";
+---
+<Site title={site.home.pageTitle} description={site.home.description}>
+  <section class="hero shell" aria-labelledby="name">
+    <p class="meta role">{site.home.role}</p>
+    <div class="hero-title">
+      <h1 id="name" class="display">{site.name}</h1>
+      <div class="capsule" aria-hidden="true">
+        {projects.map((project) => <img src={sitePath(project.cover)} alt="" width="280" height="130" />)}
+      </div>
+    </div>
+    <div class="intro-row">
+      <p class="lead">{site.home.intro}</p>
+      <a class="button" href="#projects"><Roll text={site.home.projectsButton} /></a>
+    </div>
+  </section>
+  <section id="projects" class="shell work" aria-labelledby="work-title">
+    <h2 class="section-label" id="work-title">{site.home.projectsHeading}</h2>
+    {projects.map((project) => (
+      <article class="stack-card" style={`--tint:${project.tint}`}>
+        <a href={sitePath(`/work/${project.slug}/`)} class="stack-inner" aria-label={project.storyLinkLabel}>
+          <img class="card-image" src={sitePath(project.cover)} alt="" loading={project === projects[0] ? "eager" : "lazy"} style={`view-transition-name: cover-${project.slug}`} />
+          <div class="stack-overlay">
+            <span class="chip">{project.category}</span>
+            <div class="stack-bottom">
+              <div><h3 class="display">{project.title}</h3><p>{project.headline}</p></div>
+              <span class="story-link"><Roll text={site.home.storyLink} /></span>
+            </div>
+          </div>
+        </a>
+      </article>
+    ))}
+  </section>
+  <section id="experience" class="shell experience" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">{site.experience.heading}</h2>
+    <div>
+      <p class="experience-intro">{site.experience.intro}</p>
+      <dl>
+        {site.experience.entries.map((entry) => (
+          <div><dt>{entry.title}</dt><dd>{entry.text}</dd></div>
+        ))}
+      </dl>
+    </div>
+  </section>
+</Site>

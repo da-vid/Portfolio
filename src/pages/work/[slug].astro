@@ -1,0 +1,38 @@
+---
+import { sitePath } from "../../lib/site-path";
+import Site from "../../layouts/Site.astro";
+import Roll from "../../components/Roll.astro";
+import { projects, site, type Project } from "../../data/projects";
+
+export function getStaticPaths() {
+  return projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: { project, next: projects[(index + 1) % projects.length] },
+  }));
+}
+interface Props { project: Project; next: Project; }
+const { project, next } = Astro.props;
+---
+<Site title={project.pageTitle} description={project.intro} image={project.cover}>
+  <article class="case" style={`--tint:${project.tint}`}>
+    <header class="case-head">
+      <div class="shell">
+        <a class="back" href={sitePath("/#projects")}>{site.projectPage.allProjects}</a>
+        <p class="meta">{project.category}</p>
+        <h1 class="display">{project.title}</h1>
+        <p class="lead">{project.intro}</p>
+        <a class="button" href={project.url}><Roll text={project.openButton} /></a>
+      </div>
+    </header>
+    <div class="case-cover"><img src={sitePath(project.cover)} alt="" style={`view-transition-name: cover-${project.slug}`} /></div>
+    <div class="shell story">
+      <h2>{project.headline}</h2>
+      <div><p>{project.story}</p><p>{project.approach}</p></div>
+    </div>
+    <figure class="shell product">
+      <div class="product-frame"><img src={sitePath(project.image)} alt={project.imageAlt} loading="lazy" /></div>
+      <figcaption>{project.caption}</figcaption>
+    </figure>
+    <div class="shell next"><span>{site.projectPage.nextProject}</span><a href={sitePath(`/work/${next.slug}/`)}>{next.title}</a></div>
+  </article>
+</Site>
