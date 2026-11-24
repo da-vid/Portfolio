@@ -179,6 +179,9 @@ figcaption { color: #54534e; font-size: .95rem; margin-top: .75rem; }
   .stack-inner { height: clamp(22rem, 105vw, 32rem); }
   .stack-card:first-of-type .card-image { object-position: 58% center; }
 }
+@media (max-width: 26rem) {
+  .site-header { flex-wrap: wrap; gap: .35rem 1rem; padding-block: .75rem; }
+}
 @media (max-width: 23rem) {
   .site-header { padding-inline: .75rem; }
   nav { gap: .5rem; font-size: .875rem; }
