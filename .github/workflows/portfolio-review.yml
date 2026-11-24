@@ -1,0 +1,67 @@
+name: Publish portfolio review
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - .github/workflows/portfolio-review.yml
+      - .github/portfolio-review-revision
+
+concurrency:
+  group: portfolio-pages-review
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Read the selected portfolio revision
+        id: source
+        run: |
+          revision=$(cat .github/portfolio-review-revision)
+          [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.source.outputs.revision }}
+          path: portfolio-source
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: portfolio-source/.nvmrc
+          cache: npm
+          cache-dependency-path: portfolio-source/package-lock.json
+      - name: Build and check the review
+        working-directory: portfolio-source
+        env:
+          PORTFOLIO_SITE: https://da-vid.github.io
+          PORTFOLIO_BASE: /Portfolio/review/
+        run: |
+          npm ci
+          npm run build
+          npm run check
+      - name: Add the review beside the existing Pages site
+        run: |
+          mkdir -p "$RUNNER_TEMP/pages"
+          git archive HEAD -- index.html css img 'img copy' js | tar -x -C "$RUNNER_TEMP/pages"
+          cp -R portfolio-source/dist "$RUNNER_TEMP/pages/review"
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ runner.temp }}/pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}review/
+    steps:
+      - name: Publish the review
+        id: deployment
+        uses: actions/deploy-pages@v5
